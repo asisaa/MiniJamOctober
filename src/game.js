@@ -368,11 +368,11 @@ var loop = kontra.gameLoop({
 
 
   if (fl.x <= -1000)
-  { fl.x = 990;}
+  { fl.x = 970;}
     fl.update();
 
   if (fl2.x <= -1000)
-  { fl2.x = 990;}
+  { fl2.x = 970;}
   fl2.update();
 
   if (sl.x <= -1000)
