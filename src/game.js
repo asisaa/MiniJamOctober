@@ -9,7 +9,7 @@ https://straker.github.io/kontra/
 
 //loading the assets first and then starting the game
 kontra.assets.imagePath = 'src/img';
-kontra.assets.load('monsterone.png','food_1_small.png','food_2_small.png','food_3_small.png')
+kontra.assets.load('monsterone.png','food_1_small.png','food_2_small.png','food_3_small.png','train.png')
 .then(function() {
 
   //Variabel to keep track of the score
@@ -37,8 +37,8 @@ kontra.init();
 //THE MAIN PLAYER
     let monsterone = new Image();
     monsterone.src = 'src/img/monsterone.png';
-    //let monstertwo = new Image();
-    //monstertwo.src = 'monsterone.png';
+    let monstertwo = new Image();
+    monstertwo.src = 'src/img/train.png';
 
     var player = kontra.sprite({
         x: 80,
@@ -294,7 +294,12 @@ var loop = kontra.gameLoop({
       });
     //pawsprite.update();
 
-  //Loop Background
+//Change Character Image
+  if (score > 20) {
+    player.image = monstertwo;
+  }
+
+//Loop Background
   if (floor.x <= -1000)
   { floor.x = 1000;}
     floor.update();
