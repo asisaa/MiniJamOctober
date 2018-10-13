@@ -2,11 +2,13 @@
 
 ![plastic terror](art/assets/hero_evo2_small_f0.png)
 
-October MiniGameJam 2018 - Berlin
-A javascript game for fun designed and developed within a couple of hour.
+October MiniGameJam 2018 - Berlin.
+A javascript designed and developed for the October Mini Game Jam 2018.
 
-### The story
-This Jam session was: underwater, futuristic animals
+### Themes
+- Unerwater exploration
+- The floor is...
+- Futuristic animal
 
 ### How to play
 Download the code and just open the index.html on your Desktop.  
@@ -19,13 +21,13 @@ Kontra.js
 https://straker.github.io/kontra/
 
 ### Authors
-Asisa, Pierre and Alioune  
+Asisa, Alioune and Pierre   
 
 ### Our game story
 What happens when more plastic will fill the ocean?
 Cells will turn into bigger and bigger monsters.
 
-We accomplished to start the first transition.
+We just started with the first transition...
 
 ### License
 This project is licensed under the MIT License - see the LICENSE.txt file for details
