@@ -211,6 +211,7 @@ var loop = kontra.gameLoop({
 
 
   update: function() {
+    console.log(score);
 
     // control player with the keyboard
 
