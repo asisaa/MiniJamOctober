@@ -9,7 +9,7 @@ https://straker.github.io/kontra/
 
 //loading the assets first and then starting the game
 kontra.assets.imagePath = 'src/img';
-kontra.assets.load('givepaw.png')
+kontra.assets.load('monsterone.png')
 .then(function() {
 
   //Variabel to keep track of the score
@@ -34,15 +34,19 @@ kontra.init();
       }
     }
 
-//sprite
-let player = kontra.sprite({
-  x: 80,
-  y: 230,
-  dx: 0,
-  width: 100,
-  height: 100,
-  color: 'blue'
-});
+//THE MAIN PLAYER
+    let monsterone = new Image();
+    monsterone.src = 'src/img/monsterone.png';
+    //let monstertwo = new Image();
+    //monstertwo.src = 'monsterone.png';
+
+    var player = kontra.sprite({
+        x: 80,
+        y: 230,
+        image: monsterone,
+        dx: 0
+      });
+
 
 //ARRAY WITH RGB ITEMS WHICH THE NEED TO COLLECT
     var items = [
