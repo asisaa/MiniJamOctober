@@ -27,7 +27,7 @@ Pierre (background design)
 All (idea, debugging and having fun :D )
 
 
-### Our game story
+### Game story
 What happens when more plastic will fill the ocean?
 Cells will turn into bigger and bigger monsters.
 
