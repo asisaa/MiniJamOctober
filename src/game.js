@@ -9,7 +9,7 @@ https://straker.github.io/kontra/
 
 //loading the assets first and then starting the game
 kontra.assets.imagePath = 'src/img';
-kontra.assets.load('monsterone.png','food_1_small.png','food_2_small.png','food_3_small.png','train.png','SecondLayerSea.png', 'FirstLayerSea.png', 'SeaThirdLayer.png', 'PlainBlueBG.png')
+kontra.assets.load('monsterone.png','monstertwo.png','food_1_small.png','food_2_small.png','food_3_small.png','train.png','SecondLayerSea.png', 'FirstLayerSea.png', 'SeaThirdLayer.png', 'PlainBlueBG.png')
 .then(function() {
 
   //Variabel to keep track of the score
@@ -29,7 +29,7 @@ kontra.init();
 
     var text = {
     showtext: function() {
-      ctx.fillStyle="#0000ff";
+      ctx.fillStyle="#ffffff";
       ctx.fillText("PLASTIC TERROR", 20,40);
       }
     }
@@ -38,7 +38,7 @@ kontra.init();
     let monsterone = new Image();
     monsterone.src = 'src/img/monsterone.png';
     let monstertwo = new Image();
-    monstertwo.src = 'src/img/train.png';
+    monstertwo.src = 'src/img/monstertwo.png';
 
     var player = kontra.sprite({
         x: 80,
@@ -70,7 +70,7 @@ kontra.init();
     firstlayer.src = 'src/img/FirstLayerSea.png';
     var fl = kontra.sprite({
         x: 0,
-        y: 50,
+        y: 400,
         image: firstlayer,
         dx: -1.1
       });
@@ -79,7 +79,7 @@ kontra.init();
     firstlayer2.src = 'src/img/FirstLayerSea.png';
     var fl2 = kontra.sprite({
         x: 1000,
-        y: 50,
+        y: 400,
         image: firstlayer,
         dx: -1.1
       });
@@ -88,7 +88,7 @@ kontra.init();
     secondlayer.src = 'src/img/SecondLayerSea.png';
     var sl = kontra.sprite({
         x: 0,
-        y: 50,
+        y: 300,
         image: secondlayer,
         dx: -3
       });
@@ -97,10 +97,19 @@ kontra.init();
     secondlayer2.src = 'src/img/SecondLayerSea.png';
     var sl2 = kontra.sprite({
         x: 1000,
-        y: 50,
+        y: 300,
         image: secondlayer,
         dx: -3
       });
+
+      let thirdlayer = new Image();
+      thirdlayer.src = 'src/img/SeaThirdLayer.png';
+      var tl = kontra.sprite({
+          x: 0,
+          y: 0,
+          image: thirdlayer,
+          dx: 0
+        });
 
 
       let fourthlayer = new Image();
@@ -111,6 +120,8 @@ kontra.init();
           image: fourthlayer,
           dx: 0
         });
+
+
 
 
 
@@ -342,7 +353,7 @@ var loop = kontra.gameLoop({
     //pawsprite.update();
 
 //Change Character Image
-  if (score > 20) {
+  if (score > 100) {
     player.image = monstertwo;
   }
 
@@ -357,22 +368,23 @@ var loop = kontra.gameLoop({
 
 
   if (fl.x <= -1000)
-  { fl.x = 1000;}
+  { fl.x = 990;}
     fl.update();
 
   if (fl2.x <= -1000)
-  { fl2.x = 1000;}
+  { fl2.x = 990;}
   fl2.update();
 
   if (sl.x <= -1000)
-  { sl.x = 1000;}
+  { sl.x = 999;}
     sl.update();
 
   if (sl2.x <= -1000)
-  { sl2.x = 1000;}
+  { sl2.x = 999;}
   sl2.update();
 
     fol.update();
+    tl.update();
 
     player.update ();
 
@@ -382,6 +394,7 @@ var loop = kontra.gameLoop({
     //pawsprite.render();
 
     fol.render();
+    tl.render();
     sl.render();
     sl2.render();
     fl.render();
