@@ -9,7 +9,7 @@ https://straker.github.io/kontra/
 
 //loading the assets first and then starting the game
 kontra.assets.imagePath = 'src/img';
-kontra.assets.load('monsterone.png')
+kontra.assets.load('monsterone.png','food_1_small.png','food_2_small.png','food_3_small.png')
 .then(function() {
 
   //Variabel to keep track of the score
@@ -47,8 +47,27 @@ kontra.init();
         dx: 0
       });
 
+  //BACKGROUND
+      let water = new Image();
+      water.src = 'src/img/SeaFloor.png';
+      var floor = kontra.sprite({
+          x: 0,
+          y: 300,
+          image: water,
+          dx: 0
+        });
+
 
 //ARRAY WITH RGB ITEMS WHICH THE NEED TO COLLECT
+let foodone = new Image();
+foodone.src = 'src/img/food_1_small.png';
+
+let foodtwo = new Image();
+foodtwo.src = 'src/img/food_2_small.png';
+
+let foodthree = new Image();
+foodthree.src = 'src/img/food_3_small.png';
+
     var items = [
 
       kontra.sprite({
@@ -56,7 +75,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'red',
+        image: foodone,
         dx: -2.5
       }),
       kontra.sprite({
@@ -64,7 +83,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'red',
+        image: foodone,
         dx: -2.5
       }),
       kontra.sprite({
@@ -72,7 +91,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'red',
+        image: foodone,
         dx: -2
       }),
       kontra.sprite({
@@ -80,7 +99,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'red',
+        image: foodone,
         dx: -2
       }),
       kontra.sprite({
@@ -88,7 +107,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'red',
+        image: foodone,
         dx: -2
       }),
       kontra.sprite({
@@ -96,7 +115,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'blue',
+        image: foodtwo,
         dx: -2.5
       }),
       kontra.sprite({
@@ -104,7 +123,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'blue',
+        image: foodtwo,
         dx: -2.5
       }),
       kontra.sprite({
@@ -112,7 +131,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'blue',
+        image: foodtwo,
         dx: -2
       }),
       kontra.sprite({
@@ -120,7 +139,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'blue',
+        image: foodtwo,
         dx: -2
       }),
       kontra.sprite({
@@ -128,7 +147,7 @@ kontra.init();
         y: Math.random () * 600,
         width: 10,
         height: 5,
-        color: 'blue',
+        image: foodtwo,
         dx: -2
       }),
       kontra.sprite({
@@ -136,7 +155,7 @@ kontra.init();
           y: Math.random () * 600,
           width: 10,
           height: 5,
-          color: '#00ff00',
+          image: foodthree,
           dx: -2
         }),
       kontra.sprite({
@@ -144,7 +163,7 @@ kontra.init();
           y: Math.random () * 600,
           width: 10,
           height: 5,
-          color: '#00ff00',
+          image: foodthree,
           dx: -2
         }),
       kontra.sprite({
@@ -152,7 +171,7 @@ kontra.init();
           y: Math.random () * 600,
           width: 10,
           height: 5,
-          color: '#00ff00',
+          image: foodthree,
           dx: -2.5
         }),
       kontra.sprite({
@@ -160,7 +179,7 @@ kontra.init();
           y: Math.random () * 600,
           width: 10,
           height: 5,
-          color: '#00ff00',
+          image: foodthree,
           dx: -2.5
         }),
       kontra.sprite({
@@ -168,7 +187,7 @@ kontra.init();
           y: Math.random () * 600,
           width: 10,
           height: 5,
-          color: '#00ff00',
+          image: foodthree,
           dx: -2
         })
     ];
@@ -216,6 +235,7 @@ var loop = kontra.gameLoop({
 
   update: function() {
     console.log(score);
+    floor.update ();
 
     // control player with the keyboard
 
@@ -235,7 +255,6 @@ var loop = kontra.gameLoop({
         player.x -= 6;
       }
 
-
 //When player leave the canvas it enters the canvas on the other side
 
       if (player.x >= 980) {
@@ -254,7 +273,7 @@ var loop = kontra.gameLoop({
         player.y = 500;
       }
 
-//Loop and Items Update
+//Loop and Trash Items Update
     items.forEach(function(item){
       if (item.collidesWith(player)) {
         item.x = -200;
@@ -267,12 +286,13 @@ var loop = kontra.gameLoop({
       });
     //pawsprite.update();
 
-    player.update();
+    player.update ();
+
   },
 //RENDER FUNCTION
   render: function() {
     //pawsprite.render();
-
+    floor.render();
     items.forEach(function(item){
            item.render();
        });
