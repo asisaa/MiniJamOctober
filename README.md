@@ -1,6 +1,6 @@
 #PLASTIC TERROR
 
-![plastic terror](art/assets/hero_evo2_big_f0.png)
+![plastic terror](art/assets/hero_evo2_small_f0.png)
 
 October MiniGameJam 2018 - Berlin
 A javascript game for fun designed and developed within a couple of hour.
