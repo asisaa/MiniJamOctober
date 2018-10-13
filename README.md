@@ -2,8 +2,7 @@
 
 ![plastic terror](art/assets/hero_evo2_small_f0.png)
 
-October MiniGameJam 2018 - Berlin.
-A javascript designed and developed for the October Mini Game Jam 2018.
+A javascript game designed and developed for the October Mini Game Jam 2018.
 
 ### Themes
 - Unerwater exploration
