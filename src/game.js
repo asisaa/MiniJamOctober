@@ -52,9 +52,18 @@ kontra.init();
       water.src = 'src/img/SeaFloor.png';
       var floor = kontra.sprite({
           x: 0,
-          y: 300,
+          y: 546,
           image: water,
-          dx: 0
+          dx: -1
+        });
+
+      let water2 = new Image();
+      water2.src = 'src/img/SeaFloor.png';
+      var floor2 = kontra.sprite({
+          x: 1000,
+          y: 546,
+          image: water,
+          dx: -1
         });
 
 
@@ -228,16 +237,15 @@ var pawsprite = kontra.sprite({
 var loop = kontra.gameLoop({
 
 
-  /*
--_-_-_-_-_-_-_-_-_- CONTROLES _-_-_-_-_-_-_-_-_-
-*/
-
-
   update: function() {
     console.log(score);
-    floor.update ();
 
-    // control player with the keyboard
+
+    /*
+  -_-_-_-_-_-_-_-_-_- CONTROLES _-_-_-_-_-_-_-_-_-
+  */
+
+// control player with the keyboard
 
       if (kontra.keys.pressed('up')) {
         player.y -= 6;
@@ -273,7 +281,7 @@ var loop = kontra.gameLoop({
         player.y = 500;
       }
 
-//Loop and Trash Items Update
+//Loop Trash Items Update
     items.forEach(function(item){
       if (item.collidesWith(player)) {
         item.x = -200;
@@ -286,6 +294,15 @@ var loop = kontra.gameLoop({
       });
     //pawsprite.update();
 
+  //Loop Background
+  if (floor.x <= -1000)
+  { floor.x = 1000;}
+    floor.update();
+
+    if (floor2.x <= -1000)
+    { floor2.x = 1000;}
+    floor2.update();
+
     player.update ();
 
   },
@@ -293,6 +310,7 @@ var loop = kontra.gameLoop({
   render: function() {
     //pawsprite.render();
     floor.render();
+    floor2.render();
     items.forEach(function(item){
            item.render();
        });
