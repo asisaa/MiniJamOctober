@@ -30,14 +30,14 @@ kontra.init();
     var text = {
     showtext: function() {
       ctx.fillStyle="#0000ff";
-      ctx.fillText("THIS IS THE OCTOBER MINI GAME JAM !", 20,40);
+      ctx.fillText("PLASTIC TERROR", 20,40);
       }
     }
 
 //sprite
 let player = kontra.sprite({
-  x: 100,
-  y: 80,
+  x: 80,
+  y: 230,
   dx: 0,
   width: 100,
   height: 100,
@@ -215,19 +215,19 @@ var loop = kontra.gameLoop({
     // control player with the keyboard
 
       if (kontra.keys.pressed('up')) {
-        player.y -= 4;
+        player.y -= 6;
       }
 
       if (kontra.keys.pressed('down')) {
-        player.y += 4;
+        player.y += 6;
       }
 
       if (kontra.keys.pressed('right')) {
-        player.x += 4;
+        player.x += 6;
       }
 
       if (kontra.keys.pressed('left')) {
-        player.x -= 4;
+        player.x -= 6;
       }
 
 
