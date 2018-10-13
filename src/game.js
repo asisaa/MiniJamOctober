@@ -1,6 +1,6 @@
 /*
-Title: BO Animation Sprite
-Author: Asisa Asseily
+Title: October Game Jam 2018
+Author: Asisa Asseily, Pierre & alblitzxiii
 
 Libs: Kontra.js
 https://straker.github.io/kontra/
@@ -34,7 +34,7 @@ kontra.init();
     }
 
 //spriteSheet
-/*let dogimg = new Image();
+let dogimg = new Image();
 dogimg.src = 'src/img/givepaw.png';
 
 let spriteSheet = kontra.spriteSheet({
@@ -45,7 +45,7 @@ let spriteSheet = kontra.spriteSheet({
     // create a named animation: walk
     paw: {
       frames: '0..1',  // frames 0 through 1
-      frameRate: 2
+      frameRate: 20
     }
   }
 });
@@ -58,7 +58,7 @@ var pawsprite = kontra.sprite({
     animations: spriteSheet.animations
   });
 
-*/
+
 /*
 ------_-_-_-_-_-_-_-_-_- START GAME LOOP FUNCTION_-_-_-_-_-_-_-_-_--------
 */
@@ -66,11 +66,11 @@ var pawsprite = kontra.sprite({
 var loop = kontra.gameLoop({
 
   update: function() {
-    //pawsprite.update();
+    pawsprite.update();
   },
 
   render: function() {
-    //pawsprite.render();
+    pawsprite.render();
     text.showtext();
   }
 
