@@ -11,7 +11,7 @@ A javascript designed and developed for the October Mini Game Jam 2018.
 - Futuristic animal
 
 ### How to play
-Download the code and just open the index.html on your Desktop. 
+Download the code and just open the index.html on your Desktop.  
 We just started with the first transition...
 
 ### Compatibility
