@@ -21,10 +21,10 @@ Kontra.js
 https://straker.github.io/kontra/
 
 ### Authors
-Alioune (character design)
-Asisa (coding) 
-Pierre (background design)
-All (idea, debugging and having fun :D )
+- Alioune (character design)
+- Asisa (coding) 
+- Pierre (background design)
+- All (idea, debugging and having fun :D )
 
 
 ### Game story
