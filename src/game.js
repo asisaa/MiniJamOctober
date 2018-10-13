@@ -9,7 +9,7 @@ https://straker.github.io/kontra/
 
 //loading the assets first and then starting the game
 kontra.assets.imagePath = 'src/img';
-kontra.assets.load('monsterone.png','food_1_small.png','food_2_small.png','food_3_small.png','train.png','SecondLayerSea.png', 'FirstLayerSea.png', 'SeaThirdLayer.png')
+kontra.assets.load('monsterone.png','food_1_small.png','food_2_small.png','food_3_small.png','train.png','SecondLayerSea.png', 'FirstLayerSea.png', 'SeaThirdLayer.png', 'PlainBlueBG.png')
 .then(function() {
 
   //Variabel to keep track of the score
@@ -101,6 +101,17 @@ kontra.init();
         image: secondlayer,
         dx: -3
       });
+
+
+      let fourthlayer = new Image();
+      fourthlayer.src = 'src/img/PlainBlueBG.png';
+      var fol = kontra.sprite({
+          x: 0,
+          y: 0,
+          image: fourthlayer,
+          dx: 0
+        });
+
 
 
 //ARRAY WITH TRASH ITEMS
@@ -361,12 +372,16 @@ var loop = kontra.gameLoop({
   { sl2.x = 1000;}
   sl2.update();
 
+    fol.update();
+
     player.update ();
 
   },
 //RENDER FUNCTION
   render: function() {
     //pawsprite.render();
+
+    fol.render();
     sl.render();
     sl2.render();
     fl.render();
