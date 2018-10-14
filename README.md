@@ -23,7 +23,7 @@ https://straker.github.io/kontra/
 ### Authors
 - Alioune (character design)
 - Asisa (coding) 
-- Pierre (background design)
+- Pierre (background/https://opengameart.org/)
 - All (idea, debugging and having fun :D )
 
 
