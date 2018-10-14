@@ -5,7 +5,7 @@
 A javascript game designed and developed for the October Mini Game Jam 2018.
 
 ### Themes
-- Unerwater exploration
+- Underwater exploration
 - The floor is...
 - Futuristic animal
 
