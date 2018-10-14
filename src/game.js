@@ -9,7 +9,7 @@ https://straker.github.io/kontra/
 
 //loading the assets first and then starting the game
 kontra.assets.imagePath = 'src/img';
-kontra.assets.load('monsterone.png','monstertwo.png','food_1_small.png','food_2_small.png','food_3_small.png','train.png','SecondLayerSea.png', 'FirstLayerSea.png', 'SeaThirdLayer.png', 'PlainBlueBG.png')
+kontra.assets.load('monsterone.png','monstertwo.png','food_1_small.png','food_2_small.png','food_3_small.png','SecondLayerSea.png', 'FirstLayerSea.png', 'SeaThirdLayer.png', 'PlainBlueBG.png')
 .then(function() {
 
   //Variabel to keep track of the score

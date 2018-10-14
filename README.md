@@ -18,11 +18,6 @@ Desktop: Chrome, Safari, Firefox
 Kontra.js  
 https://straker.github.io/kontra/
 
-### 13kb Game Challenge
-Main theme for the 2018 competition is "offline".
-All code and game assets need to be smaller than 13,312 bytes.  
-https://js13kgames.com/
-
 ### Authors
 Asisa, Pierre and Alioune  
 
