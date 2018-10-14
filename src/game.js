@@ -34,7 +34,9 @@ kontra.init();
       }
     }
 
-//THE MAIN PLAYER
+/*
+-_-_-_-_-_-_-_-_-_- MAIN PLAYER_-_-_-_-_-_-_-_-_-
+*/
     let monsterone = new Image();
     monsterone.src = 'src/img/monsterone.png';
     let monstertwo = new Image();
@@ -47,7 +49,9 @@ kontra.init();
         dx: 0
       });
 
-  //BACKGROUND
+/*
+-_-_-_-_-_-_-_-_-_- BACKGROUND_-_-_-_-_-_-_-_-_-
+*/
     let water = new Image();
     water.src = 'src/img/SeaFloor.png';
     var floor = kontra.sprite({
@@ -122,10 +126,7 @@ kontra.init();
         });
 
 
-
-
-
-//ARRAY WITH TRASH ITEMS
+//TRASH ITEMS
 let foodone = new Image();
 foodone.src = 'src/img/food_1_small.png';
 
@@ -135,6 +136,7 @@ foodtwo.src = 'src/img/food_2_small.png';
 let foodthree = new Image();
 foodthree.src = 'src/img/food_3_small.png';
 
+//ARRAY WITH TRASH ITEMS
 var items = [
 
   kontra.sprite({
@@ -261,34 +263,6 @@ var items = [
 
 
 /*
-//spriteSheet
-let dogimg = new Image();
-dogimg.src = 'src/img/givepaw.png';
-
-
-let spriteSheet = kontra.spriteSheet({
-  image: dogimg,
-  frameWidth: 32,
-  frameHeight: 64,
-  animations: {
-    // create a named animation: walk
-    paw: {
-      frames: '0..1',  // frames 0 through 1
-      frameRate: 20
-    }
-  }
-});
-
-
-var pawsprite = kontra.sprite({
-    x: 80,
-    y: 70,
-    // use the sprite sheet animations for the sprite
-    animations: spriteSheet.animations
-  });
-
-*/
-/*
 ------_-_-_-_-_-_-_-_-_- START GAME LOOP FUNCTION_-_-_-_-_-_-_-_-_--------
 */
 
@@ -350,14 +324,14 @@ var loop = kontra.gameLoop({
       }
       item.update();
       });
-    //pawsprite.update();
 
-//Change Character Image
+
+//Change character image when score is bigger 100
   if (score > 100) {
     player.image = monstertwo;
   }
 
-//Loop Background
+//Loop all the Background Pics
   if (floor.x <= -1000)
   { floor.x = 1000;}
     floor.update();
@@ -391,7 +365,6 @@ var loop = kontra.gameLoop({
   },
 //RENDER FUNCTION
   render: function() {
-    //pawsprite.render();
 
     fol.render();
     tl.render();
